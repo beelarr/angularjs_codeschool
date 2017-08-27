@@ -25,7 +25,20 @@ angular.module('myApp', [
             templateUrl: 'partials/book-cover.html',
             replace: true
         }
+    })
+
+    .directive('reviewForm', function () {
+        return {
+            restrict: 'E',
+            templateUrl: 'partials/review-form.html' ,
+            replace: true,
+            controller: function () {
+                this.showForm = false;
+            },
+            controllerAs: 'reviewFormCtrl'
+        }
     });
+
 // config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 //   $locationProvider.hashPrefix('!');
 //
